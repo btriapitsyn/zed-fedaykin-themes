@@ -1,0 +1,369 @@
+{
+    "name": "{{theme_name}}",
+    "appearance": "{{appearance}}",
+    "style": {
+        // Borders - UI element separators
+        "border": "{{color_07}}", // Primary borders throughout UI
+        "border.variant": "{{color_07}}", // Alternative border style
+        "border.focused": "{{color_41}}", // Border when element has focus
+        "border.selected": "{{color_08}}", // Border for selected elements
+        "border.transparent": "{{color_30}}", // Invisible borders for spacing
+        "border.disabled": "{{color_32}}", // Borders for disabled elements
+        // Surface backgrounds - Main UI areas
+        "elevated_surface.background": "{{color_02}}", // Elevated panels (modals, dropdowns)
+        "surface.background": "{{color_03}}", // Secondary surfaces
+        "background": "{{color_01}}", // Main background (editor, panels)
+        // Interactive element states
+        "element.background": "{{color_01}}", // Default element background (matches main bg for panel buttons)
+        "element.hover": "{{color_04}}", // Element hover state
+        "element.active": "{{color_05}}", // Element active/pressed state
+        "element.selected": "{{color_05}}", // Selected element background
+        "element.disabled": "{{color_32}}", // Disabled element background
+        // Drag and drop
+        "drop_target.background": "{{color_40}}", // Drop zone indicator
+        // Ghost elements (placeholders, hints)
+        "ghost_element.background": "{{color_01}}", // Ghost element default (matches main bg for panel buttons)
+        "ghost_element.hover": "{{color_04}}", // Ghost element hover
+        "ghost_element.active": "{{color_05}}", // Ghost element active
+        "ghost_element.selected": "{{color_05}}", // Ghost element selected
+        "ghost_element.disabled": "{{color_32}}", // Ghost element disabled
+        // Text colors
+        "text": "{{color_09}}", // Primary text color
+        "text.muted": "{{color_10}}", // Secondary/muted text
+        "text.placeholder": "{{color_11}}", // Input placeholder text
+        "text.disabled": "{{color_12}}", // Disabled text
+        "text.accent": "{{color_25}}", // Accent/link text
+        // Icon colors
+        "icon": "{{color_09}}", // Primary icon color
+        "icon.muted": "{{color_08}}", // Muted/inactive icons
+        "icon.disabled": "{{color_12}}", // Disabled icons
+        "icon.placeholder": "{{color_11}}", // Placeholder icons
+        "icon.accent": "{{color_25}}", // Accent/special icons
+        // Main UI sections
+        "status_bar.background": "{{color_01}}", // Bottom status bar (matches main bg)
+        "title_bar.background": "{{color_01}}", // Top title bar
+        "toolbar.background": "{{color_01}}", // Toolbar background
+        "tab_bar.background": "{{color_01}}", // Tab bar background
+        "tab.inactive_background": "{{color_01}}", // Inactive tab
+        "tab.active_background": "{{color_03}}", // Active tab
+        "search.match_background": "{{color_42}}", // Search match highlight
+        "panel.background": "{{color_01}}", // Panel backgrounds
+        "panel.focused_border": "{{color_41}}", // Focused panel border
+        // Scrollbar
+        "scrollbar.thumb.background": "{{color_34}}", // Scrollbar thumb
+        "scrollbar.thumb.hover_background": "{{color_35}}", // Scrollbar thumb hover
+        "scrollbar.thumb.border": "{{color_07}}", // Scrollbar thumb border
+        "scrollbar.track.background": "{{color_01}}", // Scrollbar track
+        "scrollbar.track.border": "{{color_30}}", // Scrollbar track border
+        // Editor specific
+        "editor.foreground": "{{color_09}}", // Editor text color
+        "editor.background": "{{color_01}}", // Editor background
+        "editor.gutter.background": "{{color_01}}", // Gutter background
+        "editor.subheader.background": "{{color_02}}", // Editor subheader
+        "editor.active_line.background": "{{color_03}}", // Current line highlight
+        "editor.highlighted_line.background": "{{color_03}}", // Highlighted line
+        "editor.line_number": "{{color_08}}", // Line numbers
+        "editor.active_line_number": "{{color_09}}", // Active line number
+        "editor.invisible": "{{color_07}}", // Invisible characters
+        "editor.wrap_guide": "{{color_07}}", // Wrap guide line
+        "editor.active_wrap_guide": "{{color_08}}", // Active wrap guide
+        "editor.document_highlight.read_background": "{{color_41}}", // Read occurrence highlight
+        "editor.document_highlight.write_background": "{{color_41}}", // Write occurrence highlight
+        "editor.document_highlight.bracket_background": "{{color_44}}", // Matching bracket
+        // Terminal colors
+        "terminal.background": "{{color_01}}", // Terminal background
+        "terminal.foreground": "{{color_09}}", // Terminal text
+        "terminal.bright_foreground": "{{color_29}}", // Bright terminal text
+        "terminal.dim_foreground": "{{color_11}}", // Dim terminal text
+        // Terminal ANSI colors
+        "terminal.ansi.black": "{{color_01}}", // ANSI black
+        "terminal.ansi.bright_black": "{{color_08}}", // ANSI bright black
+        "terminal.ansi.dim_black": "{{color_12}}", // ANSI dim black
+        "terminal.ansi.red": "{{color_20}}", // ANSI red
+        "terminal.ansi.bright_red": "{{color_20}}", // ANSI bright red
+        "terminal.ansi.dim_red": "{{color_20}}", // ANSI dim red
+        "terminal.ansi.green": "{{color_23}}", // ANSI green
+        "terminal.ansi.bright_green": "{{color_23}}", // ANSI bright green
+        "terminal.ansi.dim_green": "{{color_23}}", // ANSI dim green
+        "terminal.ansi.yellow": "{{color_21}}", // ANSI yellow
+        "terminal.ansi.bright_yellow": "{{color_21}}", // ANSI bright yellow
+        "terminal.ansi.dim_yellow": "{{color_21}}", // ANSI dim yellow
+        "terminal.ansi.blue": "{{color_22}}", // ANSI blue
+        "terminal.ansi.bright_blue": "{{color_22}}", // ANSI bright blue
+        "terminal.ansi.dim_blue": "{{color_22}}", // ANSI dim blue
+        "terminal.ansi.magenta": "{{color_27}}", // ANSI magenta
+        "terminal.ansi.bright_magenta": "{{color_27}}", // ANSI bright magenta
+        "terminal.ansi.dim_magenta": "{{color_27}}", // ANSI dim magenta
+        "terminal.ansi.cyan": "{{color_28}}", // ANSI cyan
+        "terminal.ansi.bright_cyan": "{{color_28}}", // ANSI bright cyan
+        "terminal.ansi.dim_cyan": "{{color_28}}", // ANSI dim cyan
+        "terminal.ansi.white": "{{color_09}}", // ANSI white
+        "terminal.ansi.bright_white": "{{color_29}}", // ANSI bright white
+        "terminal.ansi.dim_white": "{{color_10}}", // ANSI dim white
+        // Link text
+        "link_text.hover": "{{color_25}}", // Link hover color
+        // Git/VCS conflict markers
+        "conflict": "{{color_17}}", // Conflict text color
+        "conflict.background": "{{color_17}}20", // Conflict background
+        "conflict.border": "{{color_17}}", // Conflict border
+        // Git status colors
+        "created": "{{color_23}}", // New/created files
+        "created.background": "{{color_45}}", // Created diff background
+        "created.border": "{{color_23}}", // Created border
+        "deleted": "{{color_20}}", // Deleted files
+        "deleted.background": "{{color_46}}", // Deleted diff background
+        "deleted.border": "{{color_20}}", // Deleted border
+        "modified": "{{color_21}}", // Modified files
+        "modified.background": "{{color_21}}20", // Modified diff background
+        "modified.border": "{{color_21}}", // Modified border
+        "renamed": "{{color_22}}", // Renamed files
+        "renamed.background": "{{color_22}}20", // Renamed background
+        "renamed.border": "{{color_22}}", // Renamed border
+        // Diagnostic colors
+        "error": "{{color_20}}", // Error text
+        "error.background": "{{color_02}}", // Error background
+        "error.border": "{{color_20}}", // Error border
+        "warning": "{{color_21}}", // Warning text
+        "warning.background": "{{color_02}}", // Warning background
+        "warning.border": "{{color_21}}", // Warning border
+        "info": "{{color_22}}", // Info text
+        "info.background": "{{color_02}}", // Info background
+        "info.border": "{{color_22}}", // Info border
+        "hint": "{{color_10}}", // Hint text
+        "hint.background": "{{color_02}}", // Hint background
+        "hint.border": "{{color_08}}", // Hint border
+        "success": "{{color_23}}", // Success text
+        "success.background": "{{color_02}}", // Success background
+        "success.border": "{{color_23}}", // Success border
+        // Other states
+        "hidden": "{{color_12}}", // Hidden elements
+        "hidden.background": "{{color_01}}", // Hidden background
+        "hidden.border": "{{color_07}}", // Hidden border
+        "ignored": "{{color_12}}", // Ignored files
+        "ignored.background": null, // Ignored background
+        "ignored.border": null, // Ignored border
+        "predictive": "{{color_11}}", // Predictive text/AI suggestions
+        "predictive.background": "{{color_33}}", // Predictive background
+        "predictive.border": "{{color_08}}", // Predictive border
+        "unreachable": "{{color_12}}", // Unreachable code
+        "unreachable.background": null, // Unreachable background
+        "unreachable.border": null, // Unreachable border
+        // Collaboration - Player colors for multiplayer editing
+        "players": [
+            {
+                "cursor": "{{color_25}}",
+                "background": "{{color_25}}",
+                "selection": "{{color_25}}40"
+            },
+            {
+                "cursor": "{{color_20}}",
+                "background": "{{color_20}}",
+                "selection": "{{color_20}}40"
+            },
+            {
+                "cursor": "{{color_21}}",
+                "background": "{{color_21}}",
+                "selection": "{{color_21}}40"
+            },
+            {
+                "cursor": "{{color_27}}",
+                "background": "{{color_27}}",
+                "selection": "{{color_27}}40"
+            },
+            {
+                "cursor": "{{color_28}}",
+                "background": "{{color_28}}",
+                "selection": "{{color_28}}40"
+            },
+            {
+                "cursor": "{{color_23}}",
+                "background": "{{color_23}}",
+                "selection": "{{color_23}}40"
+            },
+            {
+                "cursor": "{{color_22}}",
+                "background": "{{color_22}}",
+                "selection": "{{color_22}}40"
+            },
+            {
+                "cursor": "{{color_24}}",
+                "background": "{{color_24}}",
+                "selection": "{{color_24}}40"
+            }
+        ],
+        // Syntax highlighting
+        "syntax": {
+            // Comments
+            "comment": {
+                "color": "{{color_11}}", // Comments
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "comment.doc": {
+                "color": "{{color_11}}", // Documentation comments
+                "font_style": "italic",
+                "font_weight": null
+            },
+            // Literals
+            "string": {
+                "color": "{{color_14}}", // String literals
+                "font_style": null,
+                "font_weight": null
+            },
+            "number": {
+                "color": "{{color_15}}", // Numeric literals
+                "font_style": null,
+                "font_weight": null
+            },
+            "boolean": {
+                "color": "{{color_15}}", // Boolean values
+                "font_style": null,
+                "font_weight": null
+            },
+            // Keywords and operators
+            "keyword": {
+                "color": "{{color_16}}", // Language keywords
+                "font_style": null,
+                "font_weight": null
+            },
+            "operator": {
+                "color": "{{color_16}}", // Operators
+                "font_style": null,
+                "font_weight": null
+            },
+            // Functions and methods
+            "function": {
+                "color": "{{color_17}}", // Function names
+                "font_style": null,
+                "font_weight": null
+            },
+            "method": {
+                "color": "{{color_17}}", // Method names
+                "font_style": null,
+                "font_weight": null
+            },
+            "function.call": {
+                "color": "{{color_17}}", // Function calls
+                "font_style": null,
+                "font_weight": null
+            },
+            // Types and classes
+            "type": {
+                "color": "{{color_18}}", // Type names
+                "font_style": null,
+                "font_weight": null
+            },
+            "type.builtin": {
+                "color": "{{color_18}}", // Built-in types
+                "font_style": null,
+                "font_weight": null
+            },
+            "class": {
+                "color": "{{color_18}}", // Class names
+                "font_style": null,
+                "font_weight": null
+            },
+            "interface": {
+                "color": "{{color_18}}", // Interface names
+                "font_style": null,
+                "font_weight": null
+            },
+            // Variables and properties
+            "variable": {
+                "color": "{{color_13}}", // Variable names
+                "font_style": null,
+                "font_weight": null
+            },
+            "variable.builtin": {
+                "color": "{{color_16}}", // Built-in variables
+                "font_style": null,
+                "font_weight": null
+            },
+            "property": {
+                "color": "{{color_19}}", // Object properties
+                "font_style": null,
+                "font_weight": null
+            },
+            "attribute": {
+                "color": "{{color_19}}", // Attributes
+                "font_style": null,
+                "font_weight": null
+            },
+            // Constants and parameters
+            "constant": {
+                "color": "{{color_15}}", // Constants
+                "font_style": null,
+                "font_weight": null
+            },
+            "constant.builtin": {
+                "color": "{{color_15}}", // Built-in constants
+                "font_style": null,
+                "font_weight": null
+            },
+            "parameter": {
+                "color": "{{color_15}}", // Function parameters
+                "font_style": null,
+                "font_weight": null
+            },
+            // Tags (HTML/XML)
+            "tag": {
+                "color": "{{color_15}}", // Tag names
+                "font_style": null,
+                "font_weight": null
+            },
+            // Regular expressions
+            "regex": {
+                "color": "{{color_19}}", // Regular expressions
+                "font_style": null,
+                "font_weight": null
+            },
+            // Punctuation
+            "punctuation": {
+                "color": "{{color_09}}", // General punctuation
+                "font_style": null,
+                "font_weight": null
+            },
+            "punctuation.bracket": {
+                "color": "{{color_08}}", // Brackets
+                "font_style": null,
+                "font_weight": null
+            },
+            "punctuation.delimiter": {
+                "color": "{{color_08}}", // Delimiters
+                "font_style": null,
+                "font_weight": null
+            },
+            // Other syntax elements
+            "namespace": {
+                "color": "{{color_18}}", // Namespaces
+                "font_style": null,
+                "font_weight": null
+            },
+            "module": {
+                "color": "{{color_18}}", // Modules
+                "font_style": null,
+                "font_weight": null
+            },
+            "enum": {
+                "color": "{{color_18}}", // Enums
+                "font_style": null,
+                "font_weight": null
+            },
+            "struct": {
+                "color": "{{color_18}}", // Structs
+                "font_style": null,
+                "font_weight": null
+            },
+            "decorator": {
+                "color": "{{color_17}}", // Decorators/Annotations
+                "font_style": null,
+                "font_weight": null
+            },
+            "label": {
+                "color": "{{color_19}}", // Labels
+                "font_style": null,
+                "font_weight": null
+            }
+        }
+    }
+}
