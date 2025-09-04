@@ -210,13 +210,69 @@ def remove_theme(theme_name: str) -> None:
     else:
         print(f"Theme not found: {theme_name}")
 
+def regenerate_all_themes() -> None:
+    """Regenerate all themes from color palette files."""
+    color_palettes_dir = Path(__file__).parent / 'color_palettes'
+
+    if not color_palettes_dir.exists():
+        print("Color palettes directory not found!")
+        sys.exit(1)
+
+    # Find all palette files (excluding template)
+    palette_files = []
+    for palette_file in color_palettes_dir.glob('*.json'):
+        if palette_file.name != 'palette-template.json':
+            palette_files.append(palette_file)
+
+    if not palette_files:
+        print("No palette files found!")
+        return
+
+    print(f"Found {len(palette_files)} palette files")
+
+    # Create fresh themes structure
+    themes_data = {
+        "name": "Fedaykin Themes",
+        "author": "FedaykinDev",
+        "themes": []
+    }
+
+    # Load template once
+    template = load_template()
+
+    # Generate themes from all palettes
+    for palette_file in sorted(palette_files):
+        try:
+            print(f"Processing: {palette_file.name}")
+
+            # Load palette
+            palette = load_palette(str(palette_file))
+
+            # Replace colors in template
+            theme_str = replace_colors(template, palette)
+
+            # Parse theme JSON (removes comments)
+            new_theme = parse_theme_json(theme_str)
+
+            # Add to themes array
+            themes_data['themes'].append(new_theme)
+
+        except Exception as e:
+            print(f"Error processing {palette_file.name}: {e}")
+            continue
+
+    # Save all themes
+    save_themes(themes_data)
+    print(f"\nSuccessfully regenerated {len(themes_data['themes'])} themes")
+
 def main():
     """Main entry point."""
     if len(sys.argv) < 2:
         print("Usage:")
-        print("  python generate_theme.py <palette.json>  - Generate theme from palette")
-        print("  python generate_theme.py --list          - List all themes")
-        print("  python generate_theme.py --remove <name> - Remove theme by name")
+        print("  python generate_theme.py <palette.json>     - Generate theme from palette")
+        print("  python generate_theme.py --list             - List all themes")
+        print("  python generate_theme.py --remove <name>    - Remove theme by name")
+        print("  python generate_theme.py --regenerate-all   - Regenerate all themes from color palettes")
         sys.exit(1)
 
     command = sys.argv[1]
@@ -228,6 +284,8 @@ def main():
             print("Please provide theme name to remove")
             sys.exit(1)
         remove_theme(sys.argv[2])
+    elif command == '--regenerate-all':
+        regenerate_all_themes()
     else:
         # Assume it's a palette file path
         palette_path = Path(command)

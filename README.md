@@ -25,7 +25,7 @@ A comprehensive collection of Dune-inspired themes for Zed Editor - from dark at
 
 </details>
 
-## Themes Included (17 Total)
+## Themes Included (18 Total)
 
 ### House & Faction Themes
 - **Dune Giedi Prime** - A stark industrial monochrome theme with subtle pastel accents
@@ -38,9 +38,10 @@ A comprehensive collection of Dune-inspired themes for Zed Editor - from dark at
 - **Dune Muad'Dib** - Paul's desert leadership - fierce Fremen blue eyes, royal purples, and survival greens
 - **Dune Fremen Sietch** *(Light Theme)* - Desert survival - warm beige backgrounds with earth tones and precious water blues
 
-### Planet Themes  
+### Planet Themes
 - **Dune Arrakis Incandescent** - A warm desert theme with glowing incandescent tones - golden spice and sunset rose
 - **Dune Sandworm** - Inspired by the great makers - sandy beiges, deep earth browns, and electric spice blue
+- **Dune Kaitain** - The Imperial capital planet - deep oceanic backgrounds with vibrant yet grounded syntax highlighting featuring olive drab strings, warm amber numbers, and bright function blues
 - **Dune Caladan Storm** - The tempestuous Atreides homeworld - storm grays, ocean navy, and lightning blues
 - **Dune Salusa Secundus** - The prison planet that forged the Sardaukar - volcanic reds, ash grays, and molten metal
 - **Dune Ix Technology** - The machine planet - sleek metallics, circuit greens, and holographic purples
