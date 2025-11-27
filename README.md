@@ -25,9 +25,15 @@ A comprehensive collection of Dune-inspired themes for Zed Editor - from dark at
 
 </details>
 
-## Themes Included (18 Total)
+## Themes Included (36 Total)
+
+Each theme comes in two variants:
+
+- **Opaque** - Classic solid backgrounds
+- **Blurred** - Transparent backgrounds with macOS vibrancy blur effect
 
 ### House & Faction Themes
+
 - **Dune Giedi Prime** - A stark industrial monochrome theme with subtle pastel accents
 - **Dune Harkonnen** - A dark industrial theme with cold blues and purples inspired by the brutalist Harkonnen homeworld
 - **Dune House Atreides** - The noble house from oceanic Caladan - deep ocean blues, sea greens, silver nobility, and misty grays
@@ -35,10 +41,12 @@ A comprehensive collection of Dune-inspired themes for Zed Editor - from dark at
 - **Dune Bene Gesserit** - The mystical sisterhood - midnight blues, silver robes, and subtle gold wisdom
 
 ### Character Themes
+
 - **Dune Muad'Dib** - Paul's desert leadership - fierce Fremen blue eyes, royal purples, and survival greens
-- **Dune Fremen Sietch** *(Light Theme)* - Desert survival - warm beige backgrounds with earth tones and precious water blues
+- **Dune Fremen Sietch** _(Light Theme)_ - Desert survival - warm beige backgrounds with earth tones and precious water blues
 
 ### Planet Themes
+
 - **Dune Arrakis Incandescent** - A warm desert theme with glowing incandescent tones - golden spice and sunset rose
 - **Dune Sandworm** - Inspired by the great makers - sandy beiges, deep earth browns, and electric spice blue
 - **Dune Kaitain** - The Imperial capital planet - deep oceanic backgrounds with vibrant yet grounded syntax highlighting featuring olive drab strings, warm amber numbers, and bright function blues
@@ -47,12 +55,14 @@ A comprehensive collection of Dune-inspired themes for Zed Editor - from dark at
 - **Dune Ix Technology** - The machine planet - sleek metallics, circuit greens, and holographic purples
 
 ### Guild & Commerce Themes
+
 - **Dune Guild Navigator** - Spice-mutated navigators - deep space blacks, nebula purples, and bright orange spice gas
 - **Dune Spacing Guild** - Interstellar commerce - corporate steel grays, gold wealth accents, and technology blues
 
 ### Mystical & Mental Themes
+
 - **Dune Water of Life** - The sacred transformation - luminous blues, ethereal whites, and transcendent purples
-- **Dune Mentat** *(Light Theme)* - Human computers - clean whites, Sapho juice reds, and precise computational blues
+- **Dune Mentat** _(Light Theme)_ - Human computers - clean whites, Sapho juice reds, and precise computational blues
 - **Dune Spice Vision** - Prescient visions and spice trance - golden amber base, electric blue flashes, mystical purples, and shifting oranges
 
 ## Installation
@@ -60,12 +70,14 @@ A comprehensive collection of Dune-inspired themes for Zed Editor - from dark at
 ### Local Development Installation
 
 1. Clone this repository:
+
 ```bash
 git clone https://github.com/btriapitsyn/zed-fedaykin-themes.git
 cd zed-fedaykin-themes
 ```
 
 2. Create a symlink to your Zed extensions directory:
+
 ```bash
 ln -s $(pwd) ~/.config/zed/extensions/fedaykin-themes
 ```
@@ -84,32 +96,47 @@ ln -s $(pwd) ~/.config/zed/extensions/fedaykin-themes
    - Add descriptive comments for each color's purpose
 
 2. Generate the theme:
+
 ```bash
 python3 generate_theme.py color_palettes/your-palette.json
 ```
 
-3. The theme will be added to `themes/fedaykin-themes.json`
+3. Both opaque and blurred variants will be added to `themes/fedaykin-themes.json`
 
 ### Managing Themes
 
 List all themes:
+
 ```bash
 python3 generate_theme.py --list
 ```
 
 Remove a theme:
+
 ```bash
 python3 generate_theme.py --remove "Theme Name"
 ```
 
-Update a theme (regenerate from palette):
+Regenerate a single theme:
+
 ```bash
 python3 generate_theme.py color_palettes/your-palette.json
 ```
 
+Regenerate all themes:
+
+```bash
+python3 generate_theme.py --regenerate-all
+```
+
+### Blur Customization
+
+Blur transparency levels are defined in `generate_theme.py` via `BLUR_ALPHA` dict. Adjust values and regenerate to customize the blur effect intensity.
+
 ## Color Palette System
 
 The themes use a unified 46-color system:
+
 - **Colors 1-6**: Background colors (darkest to lightest)
 - **Colors 7-8**: Borders and dividers
 - **Colors 9-13**: Text hierarchy (brightest to dimmest)
@@ -122,6 +149,7 @@ The themes use a unified 46-color system:
 ## Design Philosophy
 
 These themes follow the principle of **narrative-driven design**:
+
 - Carefully calibrated contrast for reduced eye strain
 - Semantic color consistency across all themes
 - Color intensity that matches each theme's inspiration - from subtle monochromes to vibrant spice oranges

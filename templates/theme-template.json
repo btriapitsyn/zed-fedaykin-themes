@@ -193,174 +193,519 @@
         ],
         // Syntax highlighting
         "syntax": {
-            // Comments
+            // ===== COMMENTS =====
             "comment": {
-                "color": "{{color_11}}", // Comments
+                "color": "{{color_11}}",
                 "font_style": "italic",
                 "font_weight": null
             },
             "comment.doc": {
-                "color": "{{color_11}}", // Documentation comments
+                "color": "{{color_11}}",
                 "font_style": "italic",
                 "font_weight": null
             },
-            // Literals
+            "comment.documentation": {
+                "color": "{{color_11}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "comment.error": {
+                "color": "{{color_20}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "comment.warning": {
+                "color": "{{color_21}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "comment.hint": {
+                "color": "{{color_22}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "comment.todo": {
+                "color": "{{color_25}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "comment.note": {
+                "color": "{{color_22}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            // ===== STRINGS =====
             "string": {
-                "color": "{{color_14}}", // String literals
+                "color": "{{color_14}}",
                 "font_style": null,
                 "font_weight": null
             },
+            "string.doc": {
+                "color": "{{color_14}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "string.documentation": {
+                "color": "{{color_14}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "string.escape": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "string.regex": {
+                "color": "{{color_19}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "string.regexp": {
+                "color": "{{color_19}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "string.special": {
+                "color": "{{color_14}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "string.special.path": {
+                "color": "{{color_14}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "string.special.symbol": {
+                "color": "{{color_14}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "string.special.url": {
+                "color": "{{color_25}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            // ===== CHARACTERS =====
+            "character": {
+                "color": "{{color_14}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "character.special": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            // ===== NUMBERS =====
             "number": {
-                "color": "{{color_15}}", // Numeric literals
+                "color": "{{color_15}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "number.float": {
+                "color": "{{color_15}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "float": {
+                "color": "{{color_15}}",
                 "font_style": null,
                 "font_weight": null
             },
             "boolean": {
-                "color": "{{color_15}}", // Boolean values
+                "color": "{{color_15}}",
                 "font_style": null,
                 "font_weight": null
             },
-            // Keywords and operators
+            // ===== KEYWORDS =====
             "keyword": {
-                "color": "{{color_16}}", // Language keywords
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.conditional": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.conditional.ternary": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.coroutine": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.debug": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.directive": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.directive.define": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.exception": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.export": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.function": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.import": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.modifier": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.operator": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.repeat": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.return": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "keyword.type": {
+                "color": "{{color_16}}",
                 "font_style": null,
                 "font_weight": null
             },
             "operator": {
-                "color": "{{color_16}}", // Operators
+                "color": "{{color_16}}",
                 "font_style": null,
                 "font_weight": null
             },
-            // Functions and methods
+            // ===== FUNCTIONS =====
             "function": {
-                "color": "{{color_17}}", // Function names
+                "color": "{{color_17}}",
                 "font_style": null,
                 "font_weight": null
             },
-            "method": {
-                "color": "{{color_17}}", // Method names
+            "function.builtin": {
+                "color": "{{color_16}}",
                 "font_style": null,
                 "font_weight": null
             },
             "function.call": {
-                "color": "{{color_17}}", // Function calls
+                "color": "{{color_17}}",
                 "font_style": null,
                 "font_weight": null
             },
-            // Types and classes
-            "type": {
-                "color": "{{color_18}}", // Type names
+            "function.decorator": {
+                "color": "{{color_17}}",
                 "font_style": null,
                 "font_weight": null
             },
-            "type.builtin": {
-                "color": "{{color_18}}", // Built-in types
+            "function.macro": {
+                "color": "{{color_17}}",
                 "font_style": null,
                 "font_weight": null
             },
-            "class": {
-                "color": "{{color_18}}", // Class names
+            "function.method": {
+                "color": "{{color_17}}",
                 "font_style": null,
                 "font_weight": null
             },
-            "interface": {
-                "color": "{{color_18}}", // Interface names
+            "function.method.call": {
+                "color": "{{color_17}}",
                 "font_style": null,
                 "font_weight": null
             },
-            // Variables and properties
-            "variable": {
-                "color": "{{color_13}}", // Variable names
+            "method": {
+                "color": "{{color_17}}",
                 "font_style": null,
                 "font_weight": null
             },
-            "variable.builtin": {
-                "color": "{{color_16}}", // Built-in variables
-                "font_style": null,
-                "font_weight": null
-            },
-            "property": {
-                "color": "{{color_19}}", // Object properties
-                "font_style": null,
-                "font_weight": null
-            },
-            "attribute": {
-                "color": "{{color_19}}", // Attributes
-                "font_style": null,
-                "font_weight": null
-            },
-            // Constants and parameters
-            "constant": {
-                "color": "{{color_15}}", // Constants
-                "font_style": null,
-                "font_weight": null
-            },
-            "constant.builtin": {
-                "color": "{{color_15}}", // Built-in constants
-                "font_style": null,
-                "font_weight": null
-            },
-            "parameter": {
-                "color": "{{color_15}}", // Function parameters
-                "font_style": null,
-                "font_weight": null
-            },
-            // Tags (HTML/XML)
-            "tag": {
-                "color": "{{color_15}}", // Tag names
-                "font_style": null,
-                "font_weight": null
-            },
-            // Regular expressions
-            "regex": {
-                "color": "{{color_19}}", // Regular expressions
-                "font_style": null,
-                "font_weight": null
-            },
-            // Punctuation
-            "punctuation": {
-                "color": "{{color_09}}", // General punctuation
-                "font_style": null,
-                "font_weight": null
-            },
-            "punctuation.bracket": {
-                "color": "{{color_08}}", // Brackets
-                "font_style": null,
-                "font_weight": null
-            },
-            "punctuation.delimiter": {
-                "color": "{{color_08}}", // Delimiters
-                "font_style": null,
-                "font_weight": null
-            },
-            // Other syntax elements
-            "namespace": {
-                "color": "{{color_18}}", // Namespaces
-                "font_style": null,
-                "font_weight": null
-            },
-            "module": {
-                "color": "{{color_18}}", // Modules
-                "font_style": null,
-                "font_weight": null
-            },
-            "enum": {
-                "color": "{{color_18}}", // Enums
-                "font_style": null,
-                "font_weight": null
-            },
-            "struct": {
-                "color": "{{color_18}}", // Structs
+            "constructor": {
+                "color": "{{color_17}}",
                 "font_style": null,
                 "font_weight": null
             },
             "decorator": {
-                "color": "{{color_17}}", // Decorators/Annotations
+                "color": "{{color_17}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            // ===== TYPES =====
+            "type": {
+                "color": "{{color_18}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "type.builtin": {
+                "color": "{{color_18}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "type.definition": {
+                "color": "{{color_18}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "type.interface": {
+                "color": "{{color_18}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "type.super": {
+                "color": "{{color_18}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "type.class.definition": {
+                "color": "{{color_18}}",
+                "font_style": null,
+                "font_weight": 700
+            },
+            "class": {
+                "color": "{{color_18}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "interface": {
+                "color": "{{color_18}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "struct": {
+                "color": "{{color_18}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "enum": {
+                "color": "{{color_18}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "namespace": {
+                "color": "{{color_18}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "module": {
+                "color": "{{color_18}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            // ===== VARIABLES =====
+            "variable": {
+                "color": "{{color_13}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "variable.builtin": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "variable.member": {
+                "color": "{{color_19}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "variable.parameter": {
+                "color": "{{color_15}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "variable.special": {
+                "color": "{{color_13}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "parameter": {
+                "color": "{{color_15}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            // ===== PROPERTIES & FIELDS =====
+            "property": {
+                "color": "{{color_19}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "field": {
+                "color": "{{color_19}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "attribute": {
+                "color": "{{color_19}}",
                 "font_style": null,
                 "font_weight": null
             },
             "label": {
-                "color": "{{color_19}}", // Labels
+                "color": "{{color_19}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            // ===== CONSTANTS =====
+            "constant": {
+                "color": "{{color_15}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "constant.builtin": {
+                "color": "{{color_15}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "constant.macro": {
+                "color": "{{color_17}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            // ===== TAGS (HTML/XML/JSX) =====
+            "tag": {
+                "color": "{{color_15}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "tag.attribute": {
+                "color": "{{color_19}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "tag.delimiter": {
+                "color": "{{color_08}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "tag.doctype": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            // ===== PUNCTUATION =====
+            "punctuation": {
+                "color": "{{color_09}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "punctuation.bracket": {
+                "color": "{{color_08}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "punctuation.delimiter": {
+                "color": "{{color_08}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "punctuation.list_marker": {
+                "color": "{{color_08}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "punctuation.special": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "punctuation.special.symbol": {
+                "color": "{{color_16}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            // ===== REGEX & SYMBOLS =====
+            "regex": {
+                "color": "{{color_19}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "symbol": {
+                "color": "{{color_14}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            // ===== TEXT & MARKDOWN =====
+            "text": {
+                "color": "{{color_09}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "text.literal": {
+                "color": "{{color_14}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "title": {
+                "color": "{{color_17}}",
+                "font_style": null,
+                "font_weight": 700
+            },
+            "emphasis": {
+                "color": "{{color_09}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "emphasis.strong": {
+                "color": "{{color_09}}",
+                "font_style": null,
+                "font_weight": 700
+            },
+            "link_text": {
+                "color": "{{color_25}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "link_uri": {
+                "color": "{{color_25}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "embedded": {
+                "color": "{{color_17}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            // ===== DIFF =====
+            "diff.plus": {
+                "color": "{{color_23}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            "diff.minus": {
+                "color": "{{color_20}}",
+                "font_style": null,
+                "font_weight": null
+            },
+            // ===== MISC =====
+            "hint": {
+                "color": "{{color_11}}",
+                "font_style": "italic",
+                "font_weight": null
+            },
+            "predictive": {
+                "color": "{{color_11}}",
                 "font_style": null,
                 "font_weight": null
             }
