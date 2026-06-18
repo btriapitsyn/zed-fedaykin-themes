@@ -1,6 +1,6 @@
 id = "fedaykin-themes"
 name = "Fedaykin Themes"
-version = "1.0.0"
+version = "1.1.0"
 schema_version = 1
 authors = ["FedaykinDev"]
 description = "Dark Dune-inspired themes for Zed - industrial monochrome and warm desert palettes"

@@ -29,6 +29,7 @@ from typing import Any, Dict
 BLUR_ALPHA = {
     "transparent": "00",  # 0% - editor/terminal/panel
     "subtle": "1A",  # 10% - borders, highlights
+    "line": "60",  # 38% - active editor line
     "tint": "33",  # 20% - git status, search
     "visible": "60",  # 38% - ghost elements
     "solid": "A0",  # 63% - scrollbar, active tab
@@ -47,7 +48,7 @@ BLUR_KEYS = {
     # Editor/terminal/panel - fully transparent for max blur
     "editor.background": "transparent",
     "editor.gutter.background": "transparent",
-    "editor.active_line.background": "subtle",
+    "editor.active_line.background": "line",
     "terminal.background": "transparent",
     "panel.background": "transparent",
     "panel.overlay_background": "transparent",
@@ -59,13 +60,7 @@ BLUR_KEYS = {
     # Element states
     "element.active": "transparent",
     "element.selected": "visible",
-    # Borders - subtle
-    "border": "subtle",
-    "border.variant": "transparent",
-    "border.transparent": "transparent",
-    "panel.focused_border": "transparent",
-    "pane.focused_border": "subtle",
-    "pane_group.border": "subtle",
+    # Borders keep their opaque-theme colors in blurred variants.
     # Editor elements
     "editor.highlighted_line.background": "subtle",
     "editor.line_number": "solid",
@@ -86,7 +81,6 @@ BLUR_KEYS = {
     "ghost_element.selected": "visible",
     # Scrollbar
     "scrollbar.track.background": "transparent",
-    "scrollbar.track.border": "transparent",
     "scrollbar.thumb.background": "solid",
     "scrollbar.thumb.hover_background": "solid",
     "scrollbar.thumb.active_background": "solid",
@@ -109,6 +103,8 @@ BLUR_KEYS = {
     "hint.background": "opaque",
 }
 
+LIGHT_ACTIVE_LINE_MIX = ("#000000", 0.14)
+
 
 def add_alpha_to_color(color: str, alpha_level: str) -> str:
     """Add alpha suffix to hex color.
@@ -128,6 +124,43 @@ def add_alpha_to_color(color: str, alpha_level: str) -> str:
     alpha_suffix = BLUR_ALPHA.get(alpha_level, "FF")
 
     return f"{base_color}{alpha_suffix}"
+
+
+def mix_hex_colors(color: str, target: str, amount: float) -> str:
+    """Mix color toward target by amount, preserving no alpha."""
+    if (
+        not color
+        or not isinstance(color, str)
+        or not color.startswith("#")
+        or len(color) < 7
+    ):
+        return color
+
+    base_color = color[:7]
+    target_color = target[:7]
+
+    try:
+        base_rgb = [int(base_color[i : i + 2], 16) for i in (1, 3, 5)]
+        target_rgb = [int(target_color[i : i + 2], 16) for i in (1, 3, 5)]
+    except ValueError:
+        return color
+
+    mixed_rgb = [
+        round(base + (target - base) * amount)
+        for base, target in zip(base_rgb, target_rgb)
+    ]
+
+    return "#" + "".join(f"{value:02X}" for value in mixed_rgb)
+
+
+def tune_active_line_color(theme: Dict[str, Any]) -> None:
+    """Increase active line contrast where palette steps are too subtle."""
+    if theme.get("appearance") != "light":
+        return
+
+    key = "editor.active_line.background"
+    if key in theme["style"]:
+        theme["style"][key] = mix_hex_colors(theme["style"][key], *LIGHT_ACTIVE_LINE_MIX)
 
 
 def create_blurred_variant(theme: Dict[str, Any]) -> Dict[str, Any]:
@@ -327,6 +360,8 @@ def generate_theme(palette_path: str) -> None:
         print(theme_str[:500])
         sys.exit(1)
 
+    tune_active_line_color(opaque_theme)
+
     # Create blurred variant
     blurred_theme = create_blurred_variant(opaque_theme)
 
@@ -409,6 +444,7 @@ def regenerate_all_themes() -> None:
 
             # Parse theme JSON (removes comments)
             opaque_theme = parse_theme_json(theme_str)
+            tune_active_line_color(opaque_theme)
 
             # Create blurred variant
             blurred_theme = create_blurred_variant(opaque_theme)
